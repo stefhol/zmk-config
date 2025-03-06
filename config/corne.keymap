@@ -16,7 +16,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -63,7 +63,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp N1            &kp N2        &kp N3            &kp N4          &kp N5    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0     &kp BSPC
+&kp TAB  &kp N1            &kp N2        &kp N3            &kp N4          &kp N5    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0     &trans
 &trans   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS  &kp EQUAL
 &kp F1   &kp F2            &kp F3        &kp F4            &kp F5          &kp F6    &kp F7    &kp F8    &kp F9  &kp F10    &kp F11    &kp F12
                                          &trans            &kp GLOBE       &to 0     &to 3     &trans    &trans
