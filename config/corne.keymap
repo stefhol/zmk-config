@@ -20,6 +20,33 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        layercombo: layercombo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYERCOMBO";
+            bindings = <&to>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        equalscombo {
+            bindings = <&kp EQUAL>;
+            key-positions = <22 23>;
+            layers = <0 1 2>;
+        };
+
+        minuscombo {
+            bindings = <&kp MINUS>;
+            key-positions = <10 11>;
+            layers = <0 1 2>;
+        };
     };
 
     keymap {
@@ -33,10 +60,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q                         &kp W                     &kp E                         &kp R                       &kp T    &kp Y  &kp U                        &kp I                      &kp O                      &kp P                             &kp LEFT_BRACKET
-&kp GRAVE  &homerow_mods LEFT_CONTROL A  &homerow_mods LEFT_ALT S  &homerow_mods LEFT_COMMAND D  &homerow_mods LEFT_SHIFT F  &kp G    &kp H  &homerow_mods RIGHT_SHIFT J  &homerow_mods RIGHT_GUI K  &homerow_mods RIGHT_ALT L  &homerow_mods RIGHT_CONTROL SEMI  &kp SQT
-&trans     &kp Z                         &kp X                     &kp C                         &kp V                       &kp B    &kp N  &kp M                        &kp COMMA                  &kp DOT                    &kp FSLH                          &kp ESC
-                                                                   &kp DELETE                    &kp SPACE                   &to 0    &sl 1  &kp ENTER                    &kp BACKSPACE
+&kp TAB    &kp Q                         &kp W                     &kp E                         &kp R                       &kp T              &kp Y  &kp U                        &kp I                      &kp O                      &kp P                             &kp LEFT_BRACKET
+&kp GRAVE  &homerow_mods LEFT_CONTROL A  &homerow_mods LEFT_ALT S  &homerow_mods LEFT_COMMAND D  &homerow_mods LEFT_SHIFT F  &kp G              &kp H  &homerow_mods RIGHT_SHIFT J  &homerow_mods RIGHT_GUI K  &homerow_mods RIGHT_ALT L  &homerow_mods RIGHT_CONTROL SEMI  &kp SQT
+&trans     &kp Z                         &kp X                     &kp C                         &kp V                       &kp B              &kp N  &kp M                        &kp COMMA                  &kp DOT                    &kp FSLH                          &kp ESC
+                                                                   &kp DELETE                    &kp SPACE                   &layercombo 0 1    &sl 1  &kp ENTER                    &kp BACKSPACE
             >;
         };
 
@@ -76,6 +103,15 @@
 &none  &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
 &none  &none         &none         &bt BT_CLR    &none         &none           &none  &none  &none  &none  &none  &none
                                    &none         &none         &to 0           &none  &none  &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
