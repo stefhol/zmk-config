@@ -21,7 +21,7 @@
 include:
   # Add custom dongle and a peripheral left corne
   - board: seeeduino_xiao_ble
-    shield: corne_dongle
+    shield: corne_dongle dongle_display_view_seeeduino_xiao_ble
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     artifact-name: xiao_dongle
@@ -42,4 +42,4 @@ include:
 
   - board: nice_nano_v2
     shield: settings_reset
-    artifact-name: nice_nano_reset_settings
+    artifact-name: nice_nano_reset_settings 
