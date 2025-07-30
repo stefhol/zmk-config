@@ -13,7 +13,7 @@
 
 / {
     chosen {
-        zephyr,display = &ssd1306_ssd1306_128x64_spi; /*TODO change to correct*/
+//        zephyr,display = &nice_view; /*TODO change to correct*/
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &foostan_corne_6col_layout;
     };
